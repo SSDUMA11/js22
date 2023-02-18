@@ -1,27 +1,20 @@
-
-
 let salaries = {
     fronted: 12000,
     backend: 10000,
     designer: 8000,
-    dayPay() {
-        alert('We must pay salary on Tuesday!');
-    },
-
-    total() {
-        let sum = 0
-        for (const key in salaries){
-            sum+= this [key] }
-            
-        
+  
+    total (){
+        let sum= 0;
+        for (let key in salaries){
+            let value=this[key]
+            if(typeof value === 'number'){
+                sum += value   
+            }
+        } 
+        return sum   
     }
 }
- console.log(sum); 
+ console.log(salaries.total()); 
  salaries.manager=5000;
- salaries.total();
-
-// let expensese = salaries;
-// salaries = {};
-
-// expensese.total() 
-// let sum = this.fronted + this.backend + this.designer + this.manager;
+ console.log(salaries.total()); 
+ 

@@ -6,11 +6,8 @@ let car = {
         alert('fa! fa!');
     },
 }
-
 car.signal();
-
 car.color = 'white';
 console.log(car.color);
-
 car.type = "electric";
 console.log(car.type);
